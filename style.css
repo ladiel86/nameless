@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+body {
+    font-family: Noto Sans;
+    color: #4E4F50;
+    margin: 0;
+}
+
+b {
+    color: #486AA2;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+img {
+    z-index: -1;
+}
+
+.header {
+    position: relative;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    min-height: 100px;
+    width: 100%;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.sticky + .content {
+    padding-top: 150px;
+}
+
+.name {
+    font-size: 36pt;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: rgb(75, 93, 121);
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.toolbar {
+    display: flex;
+    background: white;
+	padding: 0 0 20px 0;
+}
+
+.tools {
+    background-color: rgba(72, 106, 162, 0.3);
+    margin: 0 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+    min-width: 130px;
+}
+
+.toolsTitle {
+    color: #486aa2;
+    font-size: 10pt;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.tool {
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px;
+    letter-spacing: -1px;
+    line-height: 20px;
+    height: 20px;
+    flex-grow: 1;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.tool[data-selected=false] {
+    
+    background-color: #ffffff;
+}
+
+.tool[data-selected=true] {
+    background-color: #486aa2;
+}
+
+.tool p {
+    font-size: 8pt;
+    text-align: center;
+    line-height: 2;
+    font-weight: 700;
+}
+
+.tool p[data-selected=false] {
+    
+    color: #486aa2;
+}
+
+.tool p[data-selected=true] {
+    color: #ffffff;
+}
+
+span.material-symbols-outlined {
+    font-size: 10pt;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+span.material-symbols-outlined[data-selected=false] {
+    display: none;
+}
+
+span.material-symbols-outlined[data-selected=true] {
+    display: inline;
+}
+
+.section {
+    margin: 40px auto;
+    justify-content: center;
+    width: 90%;
+}
+
+.jobSection {
+    margin: 40px auto 40px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(72, 106, 162, 0.1);
+    border-radius: 10px;
+    visibility: visible;
+    max-width: 1250px;
+}
+
+.jobTitle {
+    color: rgb(75, 93, 121);
+    margin: 0;
+    letter-spacing: -0.5px;
+    font-size: 12pt;
+    font-weight: 700;
+    width: 250px;    
+}
+
+.date {
+    font-size: 10pt;
+}
+
+.jobDescription {
+    margin: 0;
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+    letter-spacing: .25px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+li {
+    margin: 0 auto 15px;
+}
+
+li ul li:first-child {
+    margin-top: 15px;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto 20px;
+    letter-spacing: 5px;
+    font-size: 20pt;
+    font-weight: 700;
+    color: rgb(75, 93, 121);
+}
+
+p {
+    letter-spacing: .25px;
+    line-height: 2;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);    
+}
+
+.popup {
+    background-color: #fffff0;
+    color: #647C90;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tool:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.tile:hover p.jobTitle, .tile:hover p.employee {
+    opacity: 0.3;
+}
+
+.tile:hover {
+    background-color: #647C90;
+    cursor: pointer;
+}
+  
+.tile:hover .middle {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .first {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    img {
+        display: none;
+    }
+}
